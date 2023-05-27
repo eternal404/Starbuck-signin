@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --theme-color: #007042
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:
+        linear-gradient(red, transparent),
+        linear-gradient(to top left, lime, transparent),
+        linear-gradient(to top right, blue, transparent);
+    background-blend-mode: screen;
+}
+
+.cont {
+    width: 1476px;
+    height: 884px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 17px;
+    box-shadow: 2px 2px 20px 0px #302f2f;
+    ;
+}
+
+.in-cont {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.form-cont {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-cont {
+    width: 60%;
+    height: 100%;
+    background: url(starbuck\ login\ bg.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    border-bottom-left-radius: 100px;
+}
+
+.img-cont:hover {
+    background-size: 1.5;
+}
+
+.form-in-cont {
+    position: relative;
+    width: 74%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    user-select: none;
+}
+
+.logo a img {
+    width: 8%;
+    margin-right: 10px;
+}
+
+.logo a h2 {
+    font-size: 2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--theme-color);
+}
+
+.greeting {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    color: var(--theme-color);
+    margin: 0 0 35px 0;
+}
+
+.greeting h2 {
+    font-size: 2.4em;
+    font-weight: 700;
+}
+
+.greeting h4 {
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.main-form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 55px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+    padding: 0 40px 0 15px;
+}
+
+.input-box .icon, .input-box .icon-open {
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    transform: translateY(-50%);
+    font-size: 1.1em;
+    color: #063C36;
+    transition: 0.007s ease-in-out;
+}
+
+.input-box input:focus~.icon{
+    display: none;
+}
+
+.input-box input:not(:focus)~.icon-open{
+    display: none;
+}
+
+.input-box label {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%) scale(1);
+    font-size: 1.1em;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.5s ease-in-out;
+}
+
+/* You can try this also. */
+
+/* .input-box label::after{
+    content: '';
+    position: absolute;
+    background: rgb(255, 0, 0);
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.input-box input:focus~label::after,
+.input-box input:valid~label::after{
+    opacity: 1;
+} */
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    background: #fff;
+    top: -2px;
+    margin: 0 3px;
+}
+
+/* Why this is not working? */
+/* .input-box input:not(:placeholder-shown) input:not(:focus)~label{
+    background: #fff;
+    top: -2px;
+} */
+
+.rem-for {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.remember-me input {
+    accent-color: var(--theme-color);
+}
+
+.remember-me label {
+    color: black;
+    font-size: 1em;
+    font-weight: 500;
+    user-select: none;
+}
+
+.rem-for .forgot a {
+    color: black;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.rem-for .forgot a:hover {
+    color: var(--theme-color);
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 60px;
+    border: none;
+    background: var(--theme-color);
+    border-radius: 7px;
+    margin: 20px 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #01433B;
+}
+
+.other-opt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #03302a;
+    user-select: none;
+    font-weight: 500;
+}
+
+.other-opt::before,
+.other-opt::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #d1d7dc;
+    max-width: 100px;
+}
+
+.other-opt::before {
+    margin-right: 0.8rem;
+}
+
+.other-opt:not(:empty)::after {
+    margin-left: 0.8rem;
+}
+
+.social-handle {
+    width: 100%;
+    height: 60px;
+    border: var(--theme-color) 3px solid;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    user-select: none;
+}
+
+.social-handle p {
+    /* display: inline; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-handle img {
+    width: 5%;
+    margin-right: 10px;
+}
+
+.social-handle p a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--theme-color);
+    text-decoration: none;
+}
+
+.social-handle p a:hover {
+    color: #01433B;
+}
+
+.new-reg {
+    text-align: center;
+    font-size: 1em;
+    font-weight: 500;
+    color: black;
+    margin: 54px 0 -52px 0;
+}
+
+.new-reg a {
+    text-decoration: none;
+    color: var(--theme-color);
+}
+
+.new-reg a:hover {
+    color: #01433B;
+    text-decoration: underline;
+}
